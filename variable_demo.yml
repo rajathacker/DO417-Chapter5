@@ -6,5 +6,5 @@
   tasks:
   - name: Creating user {{ usr }}
     win_user:
-      name: "{{ usr }}"
+      name: user_{{ usr }}
       state: present
