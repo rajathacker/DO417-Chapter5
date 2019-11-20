@@ -2,7 +2,7 @@
 - name: Creating users
   hosts: all
   vars_files:
-  - vars.yml
+  - ./rajat/vars.yml
   tasks:
   - name: Creating user {{ usr }}
     win_user:
