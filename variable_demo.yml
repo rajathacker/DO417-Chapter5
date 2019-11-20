@@ -10,3 +10,4 @@
       name: user_{{ usr }}
       state: present
       password: "{{ pwd }}"
+    no_log: true
