@@ -2,9 +2,12 @@
 - name: Creating users
   hosts: all
   vars_files:
-  - ./rajat/vars.yml
+    - rajat/vars.yml
+    - rajat/password.yml
   tasks:
   - name: Creating user {{ usr }}
     win_user:
       name: user_{{ usr }}
       state: present
+      password: "{{ pwd }}"
+    no_log: true

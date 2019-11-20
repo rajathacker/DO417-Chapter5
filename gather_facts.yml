@@ -1,0 +1,7 @@
+---
+- name: Gathering information from the managed hosts
+  hosts: all
+  tasks:
+  - name: printing some information
+    debug:
+      msg: "{{ ansible_facts.hostname }}"
